@@ -10,4 +10,8 @@ import com.api.entities.Person;
 @Repository("personRepository")
 public interface IPersonRepository extends JpaRepository<Person, Serializable>{
 	
+	public Person findByIdPerson(long idPerson);
+	
+	public Person findByLastName(String lastName);
+	
 }

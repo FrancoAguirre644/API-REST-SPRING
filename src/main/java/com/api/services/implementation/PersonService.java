@@ -19,7 +19,7 @@ public class PersonService implements IPersonService{
 
 	@Override
 	public List<Person> getAll() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub 
 		return personRepository.findAll();
 	}
 
@@ -28,6 +28,26 @@ public class PersonService implements IPersonService{
 		// TODO Auto-generated method stub
 		personRepository.save(person);
 	}
+
+	@Override
+	public void remove(long idPersona) {
+		// TODO Auto-generated method stub
+		personRepository.deleteById(idPersona);
+	}
+
+	@Override
+	public Person findByidPerson(long idPerson) {
+		// TODO Auto-generated method stub
+		return personRepository.findByIdPerson(idPerson);
+	}
+
+	@Override
+	public Person findByLastName(String lastName) {
+		// TODO Auto-generated method stub
+		return personRepository.findByLastName(lastName);
+	}
+	
+	
 	
 	
 
